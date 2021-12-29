@@ -1,0 +1,16 @@
+F:\suanfa\suanfa\bin\Debug\net5.0\suanfa.exe
+F:\suanfa\suanfa\bin\Debug\net5.0\suanfa.deps.json
+F:\suanfa\suanfa\bin\Debug\net5.0\suanfa.runtimeconfig.json
+F:\suanfa\suanfa\bin\Debug\net5.0\suanfa.runtimeconfig.dev.json
+F:\suanfa\suanfa\bin\Debug\net5.0\suanfa.dll
+F:\suanfa\suanfa\bin\Debug\net5.0\ref\suanfa.dll
+F:\suanfa\suanfa\bin\Debug\net5.0\suanfa.pdb
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.csproj.AssemblyReference.cache
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.GeneratedMSBuildEditorConfig.editorconfig
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.AssemblyInfoInputs.cache
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.AssemblyInfo.cs
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.csproj.CoreCompileInputs.cache
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.dll
+F:\suanfa\suanfa\obj\Debug\net5.0\ref\suanfa.dll
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.pdb
+F:\suanfa\suanfa\obj\Debug\net5.0\suanfa.genruntimeconfig.cache

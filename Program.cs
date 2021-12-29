@@ -6,7 +6,7 @@ namespace suanfa
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Midle2Last.Change("1+(2+3)*4+5+10+50");
         }
     }
 }
