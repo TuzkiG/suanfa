@@ -61,7 +61,7 @@ namespace suanfa
                         {
                             if (operatorStack.size == 0)
                                 break;
-                            
+
                             char topChar = (char)(operatorStack.Top.data); //没有比+ -更低的运算符
                             if (topChar == '(')//括号特殊处理
                                 break;
@@ -83,7 +83,7 @@ namespace suanfa
                             Node node = operatorStack.pop();
                             if ((char)node.data == '(')
                                 break;
-                            sb.Append(node.data);
+                            sb.Append((char)node.data);
 
                         } while (true);
 
@@ -102,4 +102,51 @@ namespace suanfa
         }
 
     }
+
+    class LastCount
+    {
+        public static void Count(string str)
+        {
+            for (int i = 0; i < str.Length; i++)
+            {
+
+            }
+        }
+
+    }
+
+    class STLExercise
+    {
+        public static void exercise3_1(Node L,Node P)
+        {
+            //∵L 以及P为升序
+            //∴不用循环去取值
+            if (L == null || L.data == null)
+                return;
+
+            //int index = 0;
+            Node Pptr = P;
+            Node Lptr = L;
+            int NowIndex = 0;
+            int index = (int)Pptr.data;
+            do
+            {
+                if (NowIndex == index)
+                {
+                    Pptr = Pptr.Next;
+                    if (Pptr == null)
+                        break;
+                    index = (int)Pptr.data;
+                    Console.WriteLine(Lptr.data);
+                }
+                Lptr = Lptr.Next;
+                NowIndex++;
+            } while (Lptr.Next != null);
+        }
+        public static void exercise3_6(int num) {
+        
+        }
+
+    }
+
 }
