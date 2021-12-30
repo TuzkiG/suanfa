@@ -56,7 +56,16 @@ namespace suanfa
         /// <returns>位置</returns>
         int locate(T value);
 
-        
+        /// <summary>
+        /// 倒置链表
+        /// </summary>
+        void Reverse();
+
+        /// <summary>
+        /// 是否包含
+        /// </summary>
+        /// <param name="item"></param>
+        bool Contains(T item);
 
     }
 }

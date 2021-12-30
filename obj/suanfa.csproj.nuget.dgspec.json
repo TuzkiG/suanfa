@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\suanfa\\suanfa\\suanfa.csproj": {}
+    "F:\\suanfa\\suanfa.csproj": {}
   },
   "projects": {
-    "F:\\suanfa\\suanfa\\suanfa.csproj": {
+    "F:\\suanfa\\suanfa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\suanfa\\suanfa\\suanfa.csproj",
+        "projectUniqueName": "F:\\suanfa\\suanfa.csproj",
         "projectName": "suanfa",
-        "projectPath": "F:\\suanfa\\suanfa\\suanfa.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "F:\\suanfa\\suanfa\\obj\\",
+        "projectPath": "F:\\suanfa\\suanfa.csproj",
+        "packagesPath": "C:\\Users\\29131\\.nuget\\packages\\",
+        "outputPath": "F:\\suanfa\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "F:\\Administrator\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\29131\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

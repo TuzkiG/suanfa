@@ -1,4 +1,5 @@
 ﻿using System;
+using suanfa.List;
 
 namespace suanfa
 {
@@ -30,8 +31,32 @@ namespace suanfa
 
             //STLExercise.exercise3_1(topL, topP);
 
-            int hashVal = HashCS.HashFunc("s233232ssspppp",8);
-            Console.WriteLine(hashVal);
+            //int hashVal = HashCS.HashFunc("s233232ssspppp",8);
+            //Console.WriteLine(hashVal);
+
+            //List.SeqList<int> test = new List.SeqList<int>(5);
+            //List.SeqList<int> test2 = new List.SeqList<int>(5);
+            //for (int i = 0; i < 5; i++)
+            //    test.Append(i);
+            //for (int i = 1; i <= 5; i++)
+            //    test2.Append(i);
+            //SeqList<int> test3 = SeqList<int>.Merge2_2(test,test2);
+            //for (int i = 0; i < test3.getLength(); i++)
+            //{
+            //    Console.WriteLine(test3[i]);
+            //}
+            //for (int i = 0; i < test.getLength(); i++)
+            //    Console.WriteLine("List:{0}",test[i]);
+            //test.Delect(3);
+            //for (int i = 0; i < test.getLength(); i++)
+            //    Console.WriteLine("List:{0}", test[i]);
+            //test.Reverse();
+            //Console.WriteLine("Reverse()");
+            //for (int i = 0; i < test.getLength(); i++)
+            //{
+            //    Console.WriteLine("List:{0}", test[i]);
+            //}
+            SeqList<int>.Test();
         }
     }
 }
