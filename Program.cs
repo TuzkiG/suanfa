@@ -56,7 +56,8 @@ namespace suanfa
             //{
             //    Console.WriteLine("List:{0}", test[i]);
             //}
-            SeqList<int>.Test();
+            //SeqList<int>.Test();
+            LinkList<int>.Test();
         }
     }
 }

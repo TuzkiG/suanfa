@@ -72,7 +72,12 @@ namespace suanfa.List
                 head = p;
                 last = p;
             }
-            last.Next = p;
+            else
+            {
+                last.Next = p;
+                last = p;
+            }
+            length++;
         }
 
         public void Clear()
@@ -87,6 +92,8 @@ namespace suanfa.List
             //    head = nowNode;
             //} while (!head.Next.Equals(null));
             head = null;
+            last = null;
+            length = 0;
         }
 
         public bool Contains(T item)
@@ -99,8 +106,8 @@ namespace suanfa.List
                 if (nowNode.Data.Equals(item))
                     return true;
                 else
-                    nowNode = head.Next;
-            } while (nowNode.Next != null);
+                    nowNode = nowNode.Next;
+            } while (nowNode!= null);
             return false;
         }
 
@@ -125,6 +132,7 @@ namespace suanfa.List
                         tmpNode.Next = nowNode.Next;  //吧指针引用到删除node的下一个
                         if (tmpNode.Next == null)  //如果删除的是最后一个 就需要重新尾结点
                             last = tmpNode;
+                        length--;
                         break;
                     }
                     tmpNode = tmpNode.Next;
@@ -213,22 +221,111 @@ namespace suanfa.List
         public void Remove(T item)
         {
             if (IsEmpty())
-                return ;
+                return;
             int index = locate(item);
             Delect(index);
         }
 
         public void Reverse()
         {
-
-
-
-
+            if (IsEmpty())
+                return;
+            //可以不创建新链表就可以反转
+            Node tmpNode = head;
+            Node nextNode = null;
+            for (int i = 0; i < getLength() - 1; i++) //  1->2->3->4      其实就需要转换为 1<-2<-3<-4
+            {
+                if (nextNode != null)
+                {
+                    Node t = nextNode.Next;
+                    nextNode.Next = tmpNode;
+                    tmpNode = nextNode;
+                    nextNode = t;
+                }
+                else
+                if (tmpNode.Next != null)
+                {
+                    nextNode = tmpNode.Next.Next;
+                    tmpNode.Next.Next = tmpNode;
+                    tmpNode = tmpNode.Next;
+                    head.Next = null;
+                }
+            }
+            head = tmpNode;
         }
 
         private bool indexIsValid(int i)
         {
-            return i < 0 || i >= length;  //索引小于0就是不可用  大于等于长度也不可用
+            return !(i < 0 || i >= length);  //索引小于0就是不可用  大于等于长度也不可用
+        }
+        /// <summary>
+        /// 【例 2-5】有数据类型为整型的单链表 Ha 和 Hb，其数据元素均按从小到大的升
+        ///序排列，编写一个算法将它们合并成一个表 Hc，要求 Hc 中结点的值也是升序排
+        ///列
+        /// </summary>
+        /// <param name="Ha"></param>
+        /// <param name="Hb"></param>
+        public static LinkList<int> Merge2_5(LinkList<int> Ha, LinkList<int> Hb)
+        {
+            LinkList<int> Hc = new LinkList<int>();
+            var HaNode = Ha.head;
+            var HbNode = Hb.head;
+            do
+            {
+                if (HaNode == null || HaNode.Data > HbNode.Data)
+                {
+                    Hc.Append(HbNode.Data);
+                    if (HbNode != null)
+                        HbNode = HbNode.Next;
+                }
+                else
+                {
+                    Hc.Append(HaNode.Data);
+                    if (HaNode != null)
+                        HaNode = HaNode.Next;
+                }
+            } while (HaNode != null || HbNode != null);
+            return Hc;
+        }
+
+        public static LinkList<int> Purge2_6(LinkList<int> Ha)
+        {
+            LinkList<int> Hb = new LinkList<int>();
+            var HaNode = Ha.head;
+            do
+            {
+                if (!Hb.Contains(HaNode.Data))
+                    Hb.Append(HaNode.Data);
+                HaNode = HaNode.Next;
+            } while (HaNode != null);
+            return Hb;
+        }
+
+        public static void Test()
+        {
+            LinkList<int> linkList = new LinkList<int>();
+            for (int i = 0; i < 5; i++)
+                linkList.Append(i);
+            linkList.Reverse();
+            for (int i = 0; i < linkList.getLength(); i++)
+                Console.WriteLine(linkList.GetElem(i));
+
+
+            LinkList<int> Ha = new LinkList<int>();
+            LinkList<int> Hb = new LinkList<int>();
+            for (int i = 0; i < 5; i++)
+                Ha.Append(i);
+            for (int i = 4; i < 10; i++)
+                Hb.Append(i);
+            LinkList<int> Hc = Merge2_5(Ha, Hb);
+            for (int i = 0; i < Hc.length; i++)
+                Console.WriteLine("Merge2_5:{0}", Hc.GetElem(i));
+            LinkList<int> Hd = new LinkList<int>();
+            for (int i = 1; i < 10; i++)
+                Hd.Append(i/2);
+            LinkList<int> Hf = Purge2_6(Hd);
+            for (int i = 0; i < Hf.length; i++)
+                Console.WriteLine("Purge2_6:{0}", Hf.GetElem(i));
         }
     }
 }
