@@ -1,6 +1,7 @@
 ﻿using System;
 using suanfa.List;
 using suanfa.StackAndQueue;
+using suanfa.String;
 
 namespace suanfa
 {
@@ -59,7 +60,8 @@ namespace suanfa
             //}
             //SeqList<int>.Test();
             //LinkList<int>.Test();
-            LinkStack<int>.Test();
+            //LinkStack<int>.Test();
+            StringDS.Test();
         }
     }
 }
