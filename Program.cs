@@ -2,7 +2,8 @@
 using suanfa.List;
 using suanfa.StackAndQueue;
 using suanfa.String;
-
+using suanfa.Tree;
+using suanfa.Sort;
 namespace suanfa
 {
     class Program
@@ -61,7 +62,9 @@ namespace suanfa
             //SeqList<int>.Test();
             //LinkList<int>.Test();
             //LinkStack<int>.Test();
-            StringDS.Test();
+            //StringDS.Test();
+            //HuffmanTree.Test();
+            Sort.Sort.Test();
         }
     }
 }

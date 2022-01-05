@@ -26,7 +26,7 @@ namespace suanfa.List
 
             set
             {
-                Insert(value, index);
+                data[index] = value;
             }
         }
 

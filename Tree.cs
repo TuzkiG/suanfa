@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace suanfa
 {
-    class Tree
-    {
-        //System.Collections.
-    }
 
     class TreeNode
     {
